@@ -1,25 +1,10 @@
-console.log("Address Book");
+const title = document.getElementById("title");
+const addButton = document.getElementById("add-button");
 
-let addressBook = [];
-
-const contacts = document.getElementById("contacts");
-
-const addContact = () => {
-  const fullname = document.getElementById("fullname").value;
-  addressBook.push({ name: fullname });
-
-  console.log(fullname, "is added as a contact");
-  document.getElementById("fullname").value = "";
+const alertName = function() {
+  const fullname = document.getElementById("full-name").value;
+  alert(fullname);
 };
 
-const showContacts = () => {
-  contacts.innerHTML = "";
-
-  addressBook.map(contact => {
-    const li = document.createElement("li");
-    const contactNode = document.createTextNode(contact.name);
-    li.appendChild(contactNode);
-
-    contacts.append(li);
-  });
-};
+title.addEventListener("click", alertName);
+addButton.addEventListener("click", alertName);
