@@ -8,10 +8,15 @@ const contacts = document.getElementById("contacts");
 
 const addContact = () => {
   const fullname = document.getElementById("full-name").value;
-  addressBook.push({ name: fullname });
 
-  console.log(fullname, "is added as a contact");
-  document.getElementById("full-name").value = "";
+  if (fullname !== "") {
+    addressBook.push({ name: fullname });
+
+    console.log(fullname, "is added as a contact");
+    document.getElementById("full-name").value = "";
+  } else {
+    alert("Input can't be empty");
+  }
 };
 
 const showContacts = () => {
@@ -26,9 +31,9 @@ const showContacts = () => {
   });
 };
 
-const addContactButton = function() {
+const callAddThenShow = function() {
   addContact();
   showContacts();
 };
 
-addButton.addEventListener("click", addContactButton);
+addButton.addEventListener("click", callAddThenShow);
