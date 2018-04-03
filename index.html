@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Address Book</title>
+  <title>Simple Address Book with Storage</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
@@ -11,19 +11,24 @@
   <div id="app" class="container">
 
     <header>
-      <h1 id="title">FANCY ADDRESS BOOK</h1>
+      <h1 id="title">Simple Address Book with Storage</h1>
     </header>
 
     <section>
       <form>
-        <input id="full-name" type="text" name="fullname" value="" placeholder="First Last">
-        <button id="add-button" type="button" name="button" class="btn btn-secondary">
-          Add Contact
-        </button>
+        <div class="form-row align-items-center">
+          <div class="col-auto">
+            <input id="full-name" type="text" name="fullname" value="" placeholder="First Last" class="form-control">
+          </div>
+          <div class="col-auto">
+            <button id="add-button" type="button" name="button" class="btn btn-secondary">Add Contact</button>
+          </div>
+        </div>
       </form>
     </section>
 
     <section>
+      <br>
       <ul id="contacts">
         <!-- will add several li's in here -->
       </ul>
